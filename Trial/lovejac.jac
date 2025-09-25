@@ -1,6 +1,6 @@
 def lovejack()-> str {
     return "I love Jack!";
 }
-with entry{
+with entry:_main_{
     print(f"{lovejack()}");
 }
