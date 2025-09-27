@@ -22,7 +22,7 @@ class GuessTheNumberGame(Game):
              }
            }
            else{
-            print("Thats not a valid number!.Try again.");
+            print("Thats not a valid number!!.Try again.");
            }
          
         }
