@@ -1,13 +1,14 @@
-import random
-class Game:
+import random;
+class Game{
  def init(self:Game, attempts: int = 10){
     self.attempts = attempts;
-    self.won = false;
+    self.won = False;
  }
  def play(self:Game){
     raise NotImplementedError("Subclasses must implement this method");
  }
-class GuessTheNumberGame(Game):
+}
+class GuessTheNumberGame(Game){
   def init(self:GuessTheGame, attempts:int = 10){
      super.init(attempts);
      self.correct_number = random.randint(1,10);
@@ -33,6 +34,7 @@ class GuessTheNumberGame(Game):
  def process_guess(self:GuessTheNumberGame,guess:int){
     if guess > self.correct_number{
         print("Too High!");
+    }
     elif guess < self.correct_number{ 
        print("Too Low!");
     }
@@ -42,7 +44,7 @@ class GuessTheNumberGame(Game):
         return;
     }
      self.attempts -= 1;
-     print(f"You have {self.attempts} attempts left")
+     print(f"You have {self.attempts} attempts left");
   }
 
   }
